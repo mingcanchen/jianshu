@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {GlobalStyle} from "./style";
 
 class App extends Component {
   render() {
     return (
-      <div className = 'dell'>
-        hello world
-      </div>
+	 <Fragment>
+        <GlobalStyle />
+    
+        hello
+     </Fragment>
     );
   }
 }
