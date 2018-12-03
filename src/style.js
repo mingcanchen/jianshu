@@ -1,7 +1,6 @@
-// import { injectGlobal } from 'styled-components';
-import {createGlobalStyle} from 'styled-components';
+import { injectGlobal } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+injectGlobal`
     body {
         background: green;
     }
