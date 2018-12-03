@@ -1,12 +1,26 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-injectGlobal`
-    body {
-        background: green;
-    }
-`;
+export const GlobalStyle = createGlobalStyle`
+  body {
+    background: green;
+  }
+`
+
+// import { injectGlobal } from 'styled-components';
+// import {createGlobalStyle} from 'styled-components';
+
+// export const GlobalStyle = createGlobalStyle`
+//     body {
+//         background: green;
+//     }
+// `;
 
 // injectGlobal`
+	
+// 	body {
+// 		background: red;
+// 	}
+// `
 
 // 	html, body, div, span, applet, object, iframe,
 // 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
