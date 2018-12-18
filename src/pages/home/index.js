@@ -8,6 +8,8 @@ import {
 	HomeLeft,
 	HomeRight 
 } from './style';
+import { actionCreators } from './store';
+import { connect } from 'react-redux';
 
 class Home extends Component {
 
@@ -27,6 +29,17 @@ class Home extends Component {
 			</HomeWrapper>
 		)
 	}
+
+	componentDidMount() {
+		this.props.changeHomeData();
+	}
 }
 
-export default Home;
+const mapDispatch = (dispatch) => ({
+	changeHomeData() {
+		const action = actionCreators.getHomeInfo();
+		dispatch(action);
+	}
+});
+
+export default connect(null,mapDispatch)(Home);

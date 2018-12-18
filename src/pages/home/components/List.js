@@ -1,11 +1,12 @@
 import React, { Component} from 'react';
-import { ListItem, ListInfo } from '../style';
+import { ListItem, ListInfo,LoadMore } from '../style';
 import { connect } from 'react-redux';
+import { actionCreators } from '../store';
 
 class List extends Component {
 
 	render() {
-		const {list} = this.props;
+		const { list, getMoreList, page} = this.props;
 
 		return (
 			<div>
@@ -22,13 +23,22 @@ class List extends Component {
 						);
 					})
 				}
+				<LoadMore onClick={() => getMoreList(page)}>更多文字</LoadMore>
 			</div>
 		)
 	}
 }
 
 const mapState = (state) => ({
-	list: state.getIn(['home','articleList'])
+	list: state.getIn(['home','articleList']),
+	page: state.getIn(['home','articlePage'])
+
 });
 
-export default connect(mapState)(List);
+const mapDispatch = (dispatch) => ({
+	getMoreList(page) {
+		dispatch(actionCreators.getMoreList(page));
+	}
+});
+
+export default connect(mapState,mapDispatch)(List);

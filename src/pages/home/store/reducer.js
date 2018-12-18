@@ -1,94 +1,33 @@
 import { fromJS } from 'immutable';
+import * as constants from './constants';
 
 const defaultState = fromJS({
-	topicList: [
-		{
-			id: 1,
-			title: '社会热点',
-			imgUrl: '//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64'
-		},{
-			id: 2,
-			title: '手绘',
-			imgUrl: '//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64'
-		},{
-			id: 3,
-			title: '编程',
-			imgUrl: '//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64'
-		},{
-			id: 4,
-			title: '情感故事',
-			imgUrl: '//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64'
-		},{
-			id: 5,
-			title: '社会形态',
-			imgUrl: '//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64'
-		},{
-			id: 6,
-			title: '故事汇',
-			imgUrl: '//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64'
-		}
-	],
+	topicList: [],
 
-	articleList: [{
-		id: 1,
-		title: '除了WPS ，金山出品的这7款软件绝对让你惊艳',
-		desc: '提起金山出品的软件，相信大部分人第一个便想起WPS，它曾经占领了90%的中文文字市场，到现在也依然拥有广量用户。WPS也在一定程度上成就了金山，...',
-		imgUrl: '//upload-images.jianshu.io/upload_images/12240181-1efa6b35aaf86374?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	},{
-		id: 2,
-		title: '毕业3年3个月，来看看我的副业收入50w+，如何来的',
-		desc: '随着这个公号已经影响力越来越大了，让大家更好了解鱼哥，鱼哥花点时间说说这些年的副业收入，在不影响主要工作情况下，赚钱并不是什么可耻的事情，尽管这...',
-		imgUrl: '//upload-images.jianshu.io/upload_images/424500-f22f2f661968015d?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	},{
-		id: 3,
-		title: '转发 ：崔永元发文感叹，英雄今天悄然离世，抵不过一条八卦新闻！',
-		desc: '0月4日，崔永元更新微博转发了一条信息：一等功臣狄国平今天去世。我的朋友王伟功是狄国平的战友，他写了这篇感人至深的文章。前不久，我、伟功、崔...',
-		imgUrl: '//upload-images.jianshu.io/upload_images/6332675-55ea21059b23eba0.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	},{
-		id: 4,
-		title: '单身无聊，恋爱辛苦，不如约炮！',
-		desc: '在这个男人不缺性，女人不缺钱的时代，经历过几次或刻骨铭心或不痛不痒的爱情以后，很多人对爱情好像都少了点信心，也少了点耐心。遇到一个心动的，就迫...',
-		imgUrl: '//upload-images.jianshu.io/upload_images/8203645-97e5d3d275d1dab1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	},{
-		id: 5,
-		title: '简书，你是在作死吗？',
-		desc: '最近看了很多简书为我推荐的文章，气不打一处来。一点开，篇篇都是教你变现的文章，什么“通过写作，月入五千”啦，“写作变现，你必须知道的几点”等等...',
-		imgUrl: '//upload-images.jianshu.io/upload_images/6578683-36ba95772a50b259.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	},{
-		id: 6,
-		title: '你有多缺钱，才上简书来赚钻？',
-		desc: '文 | 典典的蟹妈 一夜之间，上万的积分兑换成了成千的钻。 从11日15日开始，在简书发布的文章前面缀上标着数量的红色小钻钻了。我还没稀罕够那可...',
-		imgUrl: '//upload-images.jianshu.io/upload_images/1873759-2b7d57dc1854f758.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
-	}],
+	articleList: [],
 
-	recommendList: [{
-		id: 1,
-		imgUrl: 'https://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png'
+	recommendList: [],
 
-	},{
-		id: 2,
-		imgUrl: 'https://cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png'
-
-	},{
-		id: 3,
-		imgUrl: 'https://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png'
-
-	},{
-		id: 4,
-		imgUrl: 'https://cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png'
-
-	},{
-		id: 5,
-		imgUrl: 'https://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png'
-
-	}]
+	articlePage: 1
 
 });
 
 export default (state= defaultState, action) => {
 
 	switch (action.type) {
+		case constants.CHANGE_HOME_DATA:
+			return state.merge({
+				topicList: fromJS(action.topicList),
+				articleList: fromJS(action.articleList),
+				recommendList: fromJS(action.recommendList)
+			})
 		
+		case constants.ADD_ARTICLE_LIST:
+			return state.merge({
+				articleList: state.get('articleList').concat(action.list),
+				articlePage: action.nextPage
+			})
+
 		default :
 			return state;
 	}
