@@ -6,18 +6,22 @@ const defaultState = fromJS({
 	content: ''
 });
 
+const change_detail = (state, action) => {
+	return state.merge({
+				title: action.title,
+				content: action.content
+	});
+};
+
 export default (state= defaultState, action) => {
 
 	switch (action.type) {
-		
+// 抽取
 		case constants.CHANGE_DETAIL:
-			return state.merge({
-				title: action.title,
-				content: action.content
-			});
+			return change_detail(state, action);
 			
 		default :
 			return state;
 	}
 
-}
+};
